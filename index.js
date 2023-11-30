@@ -39,7 +39,7 @@ const sayilar = [
 
 //Örneğin çözümü:
 function KareninAlani(kenaruzunlugu) {
-  return kenaruzunlugu * kenaruzunlugu * 1
+  return kenaruzunlugu * kenaruzunlugu
 }
 
 /* (Oto test yok) Yukarıdaki KareninAlani fonksiyonunu kenar uzunluğu = 10 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -52,12 +52,12 @@ function KareninAlani(kenaruzunlugu) {
 	4. Hesaplanan çemberin çevresi döndürülecektir.
 */
 
-function CemberinCevresi(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinCevresi(r) {
+  return 2 * pi * r
 }
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
-
+console.log(CemberinCevresi(5))
 /* 	GÖREV 2:  
 - CemberinAlani fonksiyonunu kullanarak aşağıdaki yönergeleri uygulayın:
 	1. Argüman olarak çemberin yarıçapını BİRİNCİ parametre olacak alacaktır. 
@@ -66,12 +66,12 @@ function CemberinCevresi(/* kodlar buraya */) {
 	4. Hesaplanan çemberin alanı döndürülecektir.
 */
 
-function CemberinAlani(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinAlani(r, pi) {
+  return pi * Math.pow(r, 2)
 }
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
-
+console.log(CemberinAlani(15, pi))
 /* 	GÖREV 3:
 	- Sayfanın en üstünde global değişken olarak tanımlanmış bir sayilar dizisi bulunmaktadır. Bu dizi içinde 0 ile 1000 arasında rasgele oluşturulmuş tam sayılar ve ondalıklı sayılar bulunmaktadır. Bu diziyi kullanarak aşağıdakileri uygulayın:
 		3a. enbuyuk ve enkucuk isminde 2 adet değişken tanımlayın ve sayilar dizisindeki en küçük sayı ile en büyük sayıyı bu değişkenlere atayın. (for döngüsü kullanın)
@@ -103,25 +103,68 @@ let ucetambolunenler,
 
 /* kodlar buraya */
 
+for (let i = 0; i < sayilar.length; i++) {
+  if (sayilar[i] > enbuyuk) {
+    enbuyuk = sayilar[i]
+  }
+
+  if (sayilar[i] < enkucuk) {
+    enkucuk = sayilar[i]
+  }
+}
+
 // 3b çözümü:
 
 /* kodlar buraya */
+
+sayilar.forEach((x) => {
+  if (x % 3 === 0) {
+    ucetambolunenler.push(x)
+  }
+})
 
 // 3c çözümü:
 
 /* kodlar buraya */
 
+ucebolunenlerintoplami = ucetambolunenler.reduce((s, x) => s + x, 0)
+
 // 3d çözümü
 
 /* kodlar buraya */
+
+besyuzdenkucuksayilar = sayilar.filter((x) => x < 500)
 
 // 3e çözümü
 
 /* kodlar buraya */
 
+siralisayilar = besyuzdenkucuksayilar.sort((a, b) => a - b)
+
 // 3f çözümü
 
 /* kodlar buraya */
+
+let sen = '{sayı} sayısı {tekrarSayisi} kere tekrar edilmiştir'
+
+let result = {}
+sayilar.forEach((x) => {
+  if (result[x] === undefined) {
+    result[x] = 1
+  } else {
+    result[x] = result[x] + 1
+  }
+})
+
+for (const property in result) {
+  tekraredensayilar.push(`${property} sayısı ${object[property]} kere tekrar edilmiştir`)
+}
+
+// for (let i = 0; i < result.length; i++) {
+//   tekraredensayilar.push(
+//     `${result[x]} sayısı {tekrarSayisi} kere tekrar edilmiştir`
+//   )
+// }
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 

@@ -1,6 +1,6 @@
 /* Aşağıda global olarak tanımlanmış değişkenler bulunmaktadır, bunları değiştirmeyiniz. Açıklamaları takip ederek görevleri tamamlayın. */
 
-const pi = 3.14159;
+const pi = 3.14159
 
 const sayilar = [
   45, 856, 12.5, 63, 0.02, 154, 2, 54, 78, 61.7, 654, 26, 12.5, 63, 969, 152,
@@ -27,7 +27,7 @@ const sayilar = [
   3.85, 0.85, 2.04, 1.64, 7.16, 862, 506.4, 3.9, 159, 266, 548, 910.1, 919, 491,
   845, 650, 470.6, 464.5, 423.2, 730.8, 923, 239.5, 358.6, 339.1, 507, 667.7,
   867.7,
-];
+]
 
 /* ÖRNEK GÖREV: KareninAlani fonksiyonunu kullanarak aşağıdakileri uygulayın: 
 	1. Karenin kenar uzunluğunu fonksiyonun tek parametresi olarak alacak 
@@ -37,7 +37,7 @@ const sayilar = [
 
 //Örneğin çözümü:
 function KareninAlani(kenaruzunlugu) {
-  return kenaruzunlugu * kenaruzunlugu;
+  return kenaruzunlugu * kenaruzunlugu * 1
 }
 
 /* (Oto test yok) Yukarıdaki KareninAlani fonksiyonunu kenar uzunluğu = 10 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -95,7 +95,7 @@ let ucetambolunenler,
   ucebolunenlerintoplami,
   besyuzdenkucuksayilar,
   siralisayilar,
-  tekraredensayilar;
+  tekraredensayilar
 
 // 3a çözümü
 
@@ -124,10 +124,10 @@ let ucetambolunenler,
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
 function sa() {
-  console.log("Kodlar çalışıyor");
-  return "as";
+  console.log('Kodlar çalışıyor')
+  return 'as'
 }
-sa();
+sa()
 module.exports = {
   sa,
   CemberinCevresi,
@@ -139,4 +139,4 @@ module.exports = {
   besyuzdenkucuksayilar,
   siralisayilar,
   tekraredensayilar,
-};
+}

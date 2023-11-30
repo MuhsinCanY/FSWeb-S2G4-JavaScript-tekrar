@@ -103,6 +103,9 @@ let ucetambolunenler,
 
 /* kodlar buraya */
 
+enbuyuk = 0
+enkucuk = 1000
+
 for (let i = 0; i < sayilar.length; i++) {
   if (sayilar[i] > enbuyuk) {
     enbuyuk = sayilar[i]
@@ -116,7 +119,7 @@ for (let i = 0; i < sayilar.length; i++) {
 // 3b çözümü:
 
 /* kodlar buraya */
-
+ucetambolunenler = []
 sayilar.forEach((x) => {
   if (x % 3 === 0) {
     ucetambolunenler.push(x)
@@ -126,7 +129,7 @@ sayilar.forEach((x) => {
 // 3c çözümü:
 
 /* kodlar buraya */
-
+ucebolunenlerintoplami = 0
 ucebolunenlerintoplami = ucetambolunenler.reduce((s, x) => s + x, 0)
 
 // 3d çözümü
@@ -155,9 +158,11 @@ sayilar.forEach((x) => {
     result[x] = result[x] + 1
   }
 })
-
+tekraredensayilar = []
 for (const property in result) {
-  tekraredensayilar.push(`${property} sayısı ${object[property]} kere tekrar edilmiştir`)
+  tekraredensayilar.push(
+    `${property} sayısı ${result[property]} kere tekrar edilmiştir`
+  )
 }
 
 // for (let i = 0; i < result.length; i++) {
